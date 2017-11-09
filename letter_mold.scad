@@ -10,26 +10,29 @@ font_size = 20;
 bounding_square_size = 33;
 
 // The outside shell to hold in the liquid rubber
+
 difference(){
     // Rounding the edges seems to held the mold stick to the build plate
     // on the 3d printer
+     
      minkowski(){
         linear_extrude(mold_bottom_thickness + rubber_base_thickness){
             square(size=bounding_square_size, center=true);
         }
     
-        cylinder(r=3.5,h=0.01);
+        cylinder(r=3,h=0.01);
     }
-    
+
     minkowski(){
         linear_extrude(mold_bottom_thickness + rubber_base_thickness + epsilon){
-            square(size=bounding_square_size, center=true);
+            square(size=bounding_square_size - 3, center=true);
         }
         
-        cylinder(r1 = 0, r2 = 1.5, h = mold_bottom_thickness + rubber_base_thickness + epsilon);
+        cylinder(r1 = 1.5, r2 = 1.5, h = mold_bottom_thickness + rubber_base_thickness + epsilon);
     }
 
 }
+
 
 // The letter
 difference(){
