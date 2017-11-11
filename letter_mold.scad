@@ -5,12 +5,11 @@ mold_bottom_thickness = 5.0;
 letter_thickness = 2.0;
 rubber_base_thickness = 3.0;
 
-letter = "";
+letter = "ֆ";
 font_size = 20;
 bounding_square_size = 33;
 
 // The outside shell to hold in the liquid rubber
-
 difference(){
     // Rounding the edges seems to held the mold stick to the build plate
     // on the 3d printer
