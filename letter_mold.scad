@@ -45,10 +45,11 @@ difference(){
         rotate(a=180,v=[0,0,1]){
             // This produces a slope between the face of the letter and
             // the base of the rubber stamp. This eases demolding
+            // Noto Sans Armenian:style=Regular
             minkowski(){
                 linear_extrude(letter_thickness){
                     text(text=letter,
-                         font="Noto Sans Armenian:style=Regular",
+                         font="Arek Armenian:style=Italic",
                          size=font_size,
                          valign="center",
                          halign="center");
